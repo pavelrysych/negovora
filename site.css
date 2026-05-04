@@ -17,6 +17,7 @@
   --tariff-peach-hover: #ffb066;
   --tariff-cta-text: #04244d;
   --telegram: rgb(44, 163, 219);
+  --cta-radius: 50px;
   --shell-max: 1280px;
   --pad-x: 64px;
   --font-infant: "Cormorant Infant", "Cormorant Garamond", Georgia, serif;
@@ -253,7 +254,7 @@ body {
   background: rgb(44, 163, 219);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: var(--cta-radius);
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
@@ -396,6 +397,7 @@ body {
   font-weight: 700;
   font-size: 12px;
   text-decoration: none;
+  border-radius: var(--cta-radius);
 }
 
 .cta-coral-full:hover {
@@ -571,6 +573,7 @@ body {
   line-height: normal;
   text-decoration: none;
   cursor: pointer;
+  border-radius: var(--cta-radius);
   transition:
     background-color 200ms ease,
     transform 120ms ease,
