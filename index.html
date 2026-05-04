@@ -11,32 +11,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Figtree:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero-poster">
-      <nav class="hero-poster__nav" aria-label="Навигация">
-        <a class="hero-poster__nav-link" href="#faq">Частые вопросы</a>
+    <header class="site-hero" role="banner">
+      <picture class="site-hero__picture">
+        <source media="(max-width: 768px)" srcset="assets/hero-mobile.png" />
+        <img
+          class="site-hero__img"
+          src="assets/hero.png"
+          width="1672"
+          height="941"
+          alt="Иллюстрация для сайта Диана Неговора, зоопсихология"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
+      <nav class="site-hero__nav" aria-label="Навигация по странице">
+        <a class="site-hero__nav-pill" href="#faq">Частые вопросы</a>
       </nav>
-      <div class="hero-poster__inner">
-        <!-- Экспорт из Figma: положите файл в assets/poster.png и раскомментируйте блок ниже, скройте .hero-poster__fallback в CSS при необходимости.
-        <img class="hero-poster__img" src="assets/poster.png" width="1440" height="980" alt="Диана Неговора — зоопсихология" decoding="async" fetchpriority="high" />
-        -->
-        <div class="hero-poster__fallback">
-          <p class="hero-poster__bubble">диана</p>
-          <p class="hero-poster__bubble">неговора</p>
-          <p class="hero-poster__serif">Zoopsychology</p>
-          <p class="hero-poster__mono">Tg:&nbsp;Negovora</p>
-        </div>
-      </div>
     </header>
 
-    <main id="main">
-      <section class="sheet" aria-labelledby="help-title">
-        <h2 id="help-title">Чем я могу быть полезна?</h2>
+    <main id="main" class="page">
+      <section class="section" aria-labelledby="help-title">
+        <h2 class="section__heading" id="help-title">Чем я могу быть полезна?</h2>
         <ul class="dash-list">
           <li>подготовиться к появлению собаки в доме</li>
           <li>воспитать щенка с первых недель жизни</li>
@@ -46,67 +47,105 @@
           <li>помочь собаке из приюта освоиться в новой семье</li>
           <li>организовать занятия по ноузворку</li>
         </ul>
-        <p class="after-list">
+        <p class="section__muted">
           Это самые частые запросы, но не единственные. Если у вас своя история и она здесь не описана — расскажите, я
           постараюсь помочь.
         </p>
       </section>
 
-      <section class="sheet sheet--about" aria-labelledby="bio-title">
-        <h2 id="bio-title" class="bio-name">
+      <section class="section section--about" aria-labelledby="bio-title">
+        <h2 id="bio-title" class="about-name">
           <span>Диана</span><br />
           <span>Неговора</span>
         </h2>
-        <p class="bio-role">Зоопсихолог, Тбилиси</p>
-        <p>
+        <p class="about-role">Зоопсихолог, Тбилиси</p>
+        <p class="section__muted">
           Я зоопсихолог из Тбилиси. Работаю с кошками и собаками — помогаю выстроить отношения, в которых комфортно и
           питомцу, и его семье.
         </p>
-        <p>
+        <p class="section__muted">
           Мой подход — это комплексная работа с причинами поведения, а не маскировка их последствий. Буду рада помочь
           вам лучше понять своих четвероногих.
         </p>
+
+        <div class="soc-row">
+          <a
+            class="soc-btn soc-btn--ig"
+            href="https://www.instagram.com/dinnega_zoopsy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img src="assets/extra.png" width="48" height="48" alt="" />
+          </a>
+          <a
+            class="soc-btn soc-btn--tg"
+            href="https://t.me/dinnega"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram — написать"
+          >
+            <img src="assets/decoration.png" width="48" height="48" alt="" />
+          </a>
+        </div>
+
         <div class="action-row">
-          <a class="btn btn--outline" href="#faq">Частые вопросы</a>
-          <a class="btn btn--telegram" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer">
-            <svg class="btn__tg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M21.8 7.2 2.5 13.1c-.7.2-.7.7-.1.9l5.1 1.9 2 6.6c.2.6.5.7.9.4l3-2.7 5.3 3.9c.6.4 1.1.2 1.3-.5L22.8 8.2c.2-.9-.3-1.3-1-1z"
-              />
-            </svg>
+          <a class="btn btn--ghost-pill" href="#faq">Частые вопросы</a>
+          <a class="btn btn--telegram-solid" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer">
             Написать в Telegram
           </a>
         </div>
       </section>
 
-      <section class="sheet sheet--services" aria-labelledby="svc-title">
-        <h2 id="svc-title" class="visually-hidden">Форматы работы и цены</h2>
+      <div class="section section--narrow">
+        <nav class="svc-tabs" aria-label="Разделы форматов работы">
+          <a href="#online">Online консультация</a>
+          <a href="#offline">Offline консультация</a>
+          <a href="#nosework">Nosework</a>
+          <a href="#aska">Только спросить</a>
+        </nav>
+      </div>
 
-        <article class="service-block" id="online">
-          <h3 class="service-block__title">Online консультация</h3>
-          <p>
-            Перед встречей вы присылаете видео с проявлениями проблемы, а после — записи того, как идут домашние задания.
-            Это позволяет мне видеть реальную картину и вести вас по плану, а не по догадкам.
-          </p>
-          <ul class="check">
-            <li>Видеозвонок 1 час на удобной вам платформе</li>
-            <li>Поддержка в чате до следующей встречи или в течение 1 недели после консультации</li>
-            <li>Индивидуальные рекомендации и план работы файлом</li>
-          </ul>
-          <div class="price-slot">
-            <p class="price-slot__ribbon">Самое популярное</p>
-            <p class="price-slot__lari">100&nbsp;₾</p>
-            <p class="price-slot__alt">±3000₽, ±$37</p>
-            <a class="btn btn--coral-wide" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
-              >Записаться</a
-            >
+      <section class="section section--svc" aria-labelledby="svc-live">
+        <h2 id="svc-live" class="visually-hidden">Форматы и стоимость</h2>
+
+        <article class="featured-online" id="online">
+          <div class="featured-online__layout">
+            <div class="featured-online__copy">
+              <h3 class="featured-online__title">Online консультация</h3>
+              <p class="section__muted">
+                Перед встречей вы присылаете видео с проявлениями проблемы, а после — записи того, как идут домашние
+                задания. Это позволяет мне видеть реальную картину и вести вас по плану, а не по догадкам.
+              </p>
+              <ul class="check">
+                <li>Видеозвонок 1 час на удобной вам платформе</li>
+                <li>Поддержка в чате до следующей встречи или в течение 1 недели после консультации</li>
+                <li>Индивидуальные рекомендации и план работы файлом</li>
+              </ul>
+              <div class="price-slot price-slot--featured">
+                <p class="price-slot__ribbon">Самое популярное</p>
+                <p class="price-slot__lari">100&nbsp;₾</p>
+                <p class="price-slot__alt">±3000₽, ±$37</p>
+                <a class="btn btn--coral-strong" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
+                  >Записаться</a
+                >
+              </div>
+            </div>
+            <figure class="featured-online__photo">
+              <img
+                src="assets/consult-feature.png"
+                width="1023"
+                height="1537"
+                alt="Диана с собакой на прогулке в городском парке"
+                loading="lazy"
+              />
+            </figure>
           </div>
         </article>
 
-        <article class="service-block" id="offline">
-          <h3 class="service-block__title">Offline консультация</h3>
-          <p>
+        <article class="service-mini" id="offline">
+          <h3 class="service-mini__title">Offline консультация</h3>
+          <p class="section__muted">
             Приезжаю к вам домой — туда, где питомец живёт каждый день и ведёт себя так, как ведёт обычно. Это даёт мне
             куда больше, чем любое видео: я вижу обстановку, динамику, ваши взаимодействия — и из этого складывается
             точный план работы.
@@ -116,39 +155,39 @@
             <li>Поддержка в чате до следующей встречи или в течение 1 недели после консультации</li>
             <li>Индивидуальные рекомендации и план работы файлом</li>
           </ul>
-          <div class="price-slot">
+          <div class="price-slot price-slot--inline">
             <p class="price-slot__lari">150&nbsp;₾</p>
             <p class="price-slot__alt">±5000₽, ±$56</p>
-            <a class="btn btn--coral-wide" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
+            <a class="btn btn--outline-light" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
               >Записаться</a
             >
           </div>
         </article>
 
-        <article class="service-block" id="nosework">
-          <h3 class="service-block__title">Nosework</h3>
-          <p>
+        <article class="service-mini" id="nosework">
+          <h3 class="service-mini__title">Nosework</h3>
+          <p class="section__muted">
             Поиск запаха — это то, для чего собачий нос создан природой. На занятиях мы даём собаке заниматься своим
-            делом: искать, думать, принимать решения. Это снимает тревогу, повышает уверенность в себе и укрепляет связь с
-            человеком — попутно вытягивая ту самую энергию, которую дома деть некуда.
+            делом: искать, думать, принимать решения. Это снимает тревогу, повышает уверенность в себе и укрепляет связь
+            с человеком — попутно вытягивая ту самую энергию, которую дома деть некуда.
           </p>
           <ul class="check">
             <li>30–40 минут, онлайн или у вас дома (Тбилиси)</li>
             <li>Поддержка в чате до следующей тренировки или в течение 1 недели после занятия</li>
             <li>Памятка по пройденному на тренировке материалу</li>
           </ul>
-          <div class="price-slot">
+          <div class="price-slot price-slot--inline">
             <p class="price-slot__lari">80&nbsp;₾</p>
             <p class="price-slot__alt">±2700₽, ±$30</p>
-            <a class="btn btn--coral-wide" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
+            <a class="btn btn--outline-light" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
               >Записаться</a
             >
           </div>
         </article>
 
-        <article class="service-block" id="aska">
-          <h3 class="service-block__title">Только спросить</h3>
-          <p>
+        <article class="service-mini" id="aska">
+          <h3 class="service-mini__title">Только спросить</h3>
+          <p class="section__muted">
             Бывает, что нужна не консультация, а просто понятный ответ на один вопрос: почему кот вдруг начал..., стоит ли
             беспокоиться, как реагировать. Для таких случаев — этот формат. Вы описываете ситуацию, я отвечаю по существу
             — без воды и без «приходите на полноценную встречу».
@@ -158,19 +197,19 @@
             <li>Развёрнутый ответ с разбором и рекомендациями</li>
             <li>Ответ в течение 24 часов</li>
           </ul>
-          <div class="price-slot">
+          <div class="price-slot price-slot--inline">
             <p class="price-slot__lari">40&nbsp;₾</p>
             <p class="price-slot__alt">±1300₽, ±$15</p>
-            <a class="btn btn--coral-wide" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
+            <a class="btn btn--outline-light" href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer"
               >Записаться</a
             >
           </div>
         </article>
       </section>
 
-      <section id="faq" class="sheet sheet--faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Частые вопросы</h2>
-        <div class="faq-list">
+      <section id="faq" class="section section--faq" aria-labelledby="faq-title">
+        <h2 class="section__heading section__heading--faq" id="faq-title">Частые вопросы</h2>
+        <div class="faq-shell">
           <details>
             <summary>С чем обычно приходят?</summary>
             <p>
@@ -181,8 +220,9 @@
           <details>
             <summary>Как записаться?</summary>
             <p>
-              Напишите в Telegram (<a href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer">@dinnega</a
-              >): как обращаться, город, вид питомца и коротко, что происходит. Можно приложить видео ситуации.
+              Напишите в Telegram (
+              <a href="https://t.me/dinnega" target="_blank" rel="noopener noreferrer">@dinnega</a>
+              ): как обращаться, город, вид питомца и коротко, что происходит. Можно приложить видео ситуации.
             </p>
           </details>
           <details>
