@@ -2,14 +2,14 @@
 
 Репозиторий на GitHub: [github.com/pavelrysych/negovora](https://github.com/pavelrysych/negovora)
 
-Статическая одностраничная вёрстка по содержимому профиля [Taplink — dinnega_zoopsy](https://taplink.cc/dinnega_zoopsy).
+Статическая страница по материалам [Taplink — dinnega_zoopsy](https://taplink.cc/dinnega_zoopsy). Визуальный макет основан на `Desktop.pdf` (тёмная тема, иллюстрация и типографика блоков цен экспортированы из PDF).
 
 ## Содержание
 
-- Представление, фото с Taplink
-- Текст «Обо мне»
-- Тарифы в лари (₾): выездная и онлайн консультации, ноузворк, формат «один вопрос»
-- Раздел **Популярные вопросы** (`#faq`): полные тексты с [этой страницы Taplink](https://taplink.cc/dinnega_zoopsy/p/ea52bf/), аккордеон без JavaScript.
+- Герой: арт из PDF (`assets/hero-from-pdf.png`)
+- Блок знакомства + синяя кнопка Telegram
+- Тарифы: выделенный **online** с фото из PDF (`assets/pricing-feature-photo.png`), три карточки с оранжевой обводкой
+- **Частые вопросы** (`#faq`): тексты с [Taplink /p/ea52bf/](https://taplink.cc/dinnega_zoopsy/p/ea52bf/)
 
 ## Запуск локально
 
@@ -23,7 +23,7 @@ python3 -m http.server 8080
 
 ## Стек
 
-HTML, CSS (без сборки). Шрифты: Google Fonts (Playfair Display, Manrope).
+HTML, CSS (без сборки). Шрифты: Google Fonts (**Cormorant Infant**, **Manrope**).
 
 ## Версионирование
 
