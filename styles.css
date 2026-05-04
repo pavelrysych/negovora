@@ -285,8 +285,8 @@ body {
 .online {
   margin-top: clamp(32px, 5vw, 56px);
   display: grid;
-  grid-template-columns: minmax(0, 435px) minmax(0, 557px);
-  column-gap: min(72px, 6vw);
+  grid-template-columns: minmax(0, 435px) minmax(0, 640px);
+  column-gap: min(28px, 3vw);
   align-items: start;
 }
 
@@ -397,15 +397,14 @@ body {
 
 .online__photo-wrap {
   margin: 0;
-  width: min(557px, 100%);
+  width: 100%;
+  max-width: 640px;
 }
 
-/* Картина уже к правому краю колонки: зазор слева, без «сдвига содержимого» object-position в обратную сторону */
 .online__photo {
   display: block;
-  width: min(512px, 92%);
-  margin-left: auto;
-  margin-right: 0;
+  width: 100%;
+  margin-inline: 0;
   min-height: min(564px, 120vw);
   max-height: 564px;
   object-fit: cover;
