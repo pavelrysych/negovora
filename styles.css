@@ -17,7 +17,9 @@
   --shell-max: 1280px;
   --pad-x: 64px;
   --font-infant: "Cormorant Infant", "Cormorant Garamond", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --intro-band: rgb(0, 12, 32);
 }
 
 *,
@@ -68,79 +70,94 @@ body {
   display: block;
 }
 
+.intro__band {
+  margin-inline: calc(-1 * clamp(24px, 11vw, 140px));
+  padding-inline: clamp(24px, 11vw, 140px);
+  padding-block: clamp(40px, 5.5vw, 72px);
+  background: var(--intro-band);
+}
+
 .intro__grid {
   display: grid;
   grid-template-columns: minmax(0, 473px) minmax(0, 557px);
   justify-content: start;
   column-gap: clamp(16px, 4vw, 72px);
-  row-gap: 0;
-  align-items: end;
-  margin-top: -24px;
+  row-gap: clamp(20px, 3vw, 32px);
+  align-items: start;
 }
 
 @media (max-width: 920px) {
   .intro__grid {
     grid-template-columns: 1fr;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .intro__secondary {
     order: 2;
     margin-top: 8px;
+    max-width: none;
   }
 }
 
 .intro__primary {
-  position: relative;
-  padding-bottom: clamp(8px, 2vw, 16px);
+  padding-bottom: 0;
 }
 
 .intro__heading {
   margin: 0;
-  padding: clamp(40px, 7vw, 56px) 0 0;
-  font-family: Georgia, Cambria, "Times New Roman", serif;
-  font-size: clamp(36px, 5vw, 48px);
-  line-height: 1.06;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.08em;
+  font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: 0;
   color: rgb(255, 255, 255);
 }
 
+.intro__name-row {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.06;
+}
+
+.intro__name-second {
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.06;
+}
+
+.intro__role {
+  margin-top: 0.6rem;
+  font-size: clamp(22px, 3.2vw, 32px);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
 .intro__ig {
-  position: absolute;
-  top: clamp(0px, 1vw, 10px);
-  left: clamp(178px, 38vw, 286px);
-  width: clamp(62px, 16vw, 89px);
-  height: clamp(62px, 16vw, 89px);
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 0;
+  flex-shrink: 0;
 }
 
 .intro__ig img {
-  width: 100%;
-  height: 100%;
+  width: clamp(42px, 7.5vw, 56px);
+  height: clamp(42px, 7.5vw, 56px);
   object-fit: cover;
-}
-
-@media (max-width: 920px) {
-  .intro__ig {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 72px;
-    height: 72px;
-    margin-bottom: -16px;
-  }
-
-  .intro__heading {
-    padding-top: 12px;
-  }
 }
 
 .intro__secondary {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-bottom: 6px;
+  align-items: stretch;
+  gap: 14px;
+  padding-bottom: 2px;
+  max-width: 557px;
 }
 
 .intro__text {
@@ -149,30 +166,41 @@ body {
 }
 
 .cta-tg {
-  margin-top: 6px;
-  display: inline-flex;
+  margin-top: 4px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: min(557px, 100%);
-  min-height: 41px;
-  padding: 10px 16px;
-  background: rgb(44, 163, 219);
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 0;
+  background: rgb(53, 168, 234);
   color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 2px;
+  border: none;
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.15;
+}
+
+.cta-tg__label {
+  grid-column: 2;
+  text-align: center;
 }
 
 .cta-tg__icon {
+  grid-column: 3;
+  justify-self: end;
+  align-self: center;
   display: flex;
 }
 
 .cta-tg__icon img {
-  width: 28px;
-  height: auto;
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 .cta-tg:hover {
@@ -180,18 +208,20 @@ body {
 }
 
 .intro__faq {
-  margin-top: 16px;
+  margin-top: 10px;
+  align-self: center;
   text-align: center;
-  font-family: var(--font-infant);
-  font-size: 24px;
-  line-height: 29px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.8vw, 26px);
+  line-height: 1.2;
   color: rgb(255, 255, 255);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .intro__faq:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  opacity: 0.92;
 }
 
 /* ——— Online ——— */
