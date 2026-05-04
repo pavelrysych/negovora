@@ -531,7 +531,7 @@ body {
 .tariffs .card-tariff__content::after {
   content: "";
   flex: 1 1 auto;
-  min-height: clamp(40px, 8vw, 80px);
+  min-height: clamp(24px, 5vw, 52px);
   width: 100%;
 }
 
