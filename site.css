@@ -527,6 +527,14 @@ body {
   color: rgb(255, 255, 255);
 }
 
+/* Воздух между списком и кнопкой: нижнюю часть колонки съедает ::after (+ flex-grow) */
+.tariffs .card-tariff__content::after {
+  content: "";
+  flex: 1 1 auto;
+  min-height: clamp(40px, 8vw, 80px);
+  width: 100%;
+}
+
 .tariffs .cta-bar-orange {
   margin-top: auto;
   align-self: center;

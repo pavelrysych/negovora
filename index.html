@@ -14,11 +14,19 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="site.css?v=bd43671" />
+    <link rel="stylesheet" href="site.css?v=tariffs-list-cta-gap" />
     <!-- Критический override тарифных кнопок: дубль в HTML, чтобы обойти кэш CDN на site.css -->
     <style id="tariff-cta-pin">
       .tariffs .card-tariff {
         padding-bottom: 12px !important;
+      }
+
+      .tariffs .card-tariff__content::after {
+        content: "" !important;
+        display: block !important;
+        flex: 1 1 auto !important;
+        min-height: clamp(40px, 8vw, 80px) !important;
+        width: 100% !important;
       }
 
       .tariffs .cta-bar-orange {
