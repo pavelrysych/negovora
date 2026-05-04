@@ -54,7 +54,8 @@ body {
   max-width: min(1280px, 100%);
   margin-inline: auto;
   padding-inline: var(--shell-pad-x);
-  padding-bottom: min(140px, 15vh);
+  /* Никаких отступов под футером: страница заканчивается нижним краем footer-изображения */
+  padding-bottom: 0;
   box-sizing: border-box;
 }
 
@@ -693,6 +694,7 @@ body {
 
 .site-footer {
   margin-top: clamp(40px, 8vw, 88px);
+  margin-bottom: 0;
   margin-inline: calc(-1 * var(--shell-pad-x));
   width: calc(100% + 2 * var(--shell-pad-x));
 }
@@ -724,10 +726,10 @@ body {
 .site-footer__credit {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  bottom: auto;
+  bottom: 20px;
+  top: auto;
   right: auto;
+  transform: translateX(-50%);
   margin: 0;
   padding: 0;
   width: max-content;
