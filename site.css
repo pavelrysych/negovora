@@ -471,6 +471,14 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.card-tariff__content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+}
+
 .card-tariff__list {
   margin: 0;
   padding-left: 1.06rem;
@@ -491,8 +499,8 @@ body {
 }
 
 .card-tariff__sums {
-  margin-top: auto;
-  padding-top: 4px;
+  margin: 0;
+  padding-top: 0;
 }
 
 .card-tariff__lari {
@@ -512,7 +520,8 @@ body {
 }
 
 .cta-bar-orange {
-  margin-top: 0;
+  margin-top: auto;
+  flex-shrink: 0;
   align-self: stretch;
   margin-left: -16px;
   margin-right: -16px;
@@ -522,7 +531,7 @@ body {
   justify-content: center;
   height: 41px;
   background: var(--orange-bar-fill);
-  color: rgb(255, 255, 255) !important;
+  color: rgb(1, 20, 40) !important;
   text-decoration: none;
   font-family: var(--font-sans);
   font-weight: 700;
