@@ -8,9 +8,9 @@
 
 :root {
   --page: #05264e;
-  --plate-stroke: rgb(229, 65, 82);
-  --coral-text: rgb(239, 74, 88);
-  --coral-btn: rgb(236, 67, 86);
+  --plate-stroke: #ff7c89;
+  --coral-text: #ff7c89;
+  --coral-btn: #ff7c89;
   --orange-edge: rgb(243, 142, 1);
   --orange-bar-fill: rgb(243, 142, 1);
   --telegram: rgb(44, 163, 219);
@@ -348,7 +348,7 @@ body {
   font-family: var(--font-infant);
   font-size: 40px;
   line-height: 1;
-  color: rgb(239, 74, 88);
+  color: var(--coral-text);
 }
 
 .online-price__minor {
@@ -356,7 +356,7 @@ body {
   font-family: var(--font-infant);
   font-size: clamp(18px, 2.8vw, 23px);
   line-height: 1;
-  color: rgb(239, 74, 88);
+  color: var(--coral-text);
 }
 
 .online__lead {
@@ -393,7 +393,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 41px;
-  background: rgb(237, 70, 86);
+  background: var(--coral-btn);
   color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: 12px;
@@ -473,7 +473,7 @@ body {
   font-family: var(--font-infant);
   font-size: 40px;
   line-height: 1;
-  color: rgb(239, 74, 88);
+  color: var(--coral-text);
 }
 
 .card-tariff__alt {
@@ -481,7 +481,7 @@ body {
   font-family: var(--font-infant);
   font-size: clamp(18px, 2.9vw, 24px);
   line-height: 1;
-  color: rgb(239, 74, 88);
+  color: var(--coral-text);
 }
 
 .cta-bar-orange {
