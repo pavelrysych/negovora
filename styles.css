@@ -71,15 +71,14 @@ body {
 
 .intro__grid {
   display: grid;
-  /* Та же ширина, что у иллюстрации над блоком — вынос за padding .shell */
-  margin-inline: calc(-1 * var(--shell-pad-x));
-  width: calc(100% + 2 * var(--shell-pad-x));
-  box-sizing: border-box;
-  grid-template-columns: minmax(0, 473fr) minmax(0, 557fr);
-  column-gap: clamp(16px, 4vw, 72px);
+  /* Совпадает с дорожками `.online`: левая колонка = плашке, правая = фото → один вертикальный край текст/кнопок и фото ниже */
+  grid-template-columns: minmax(0, 435px) minmax(0, 640px);
+  column-gap: min(28px, 3vw);
   row-gap: 0;
   align-items: stretch;
   margin-top: clamp(28px, 5vw, 72px);
+  width: 100%;
+  box-sizing: border-box;
   /* Одна переменная кегля — для синхронного сдвига правого текста под верх иконки (центрированной по строке «Диана») */
   --hero-name-fs: clamp(48px, 9.2vw, 96px);
   --hero-name-line-box: calc(var(--hero-name-fs) * 1.1);
