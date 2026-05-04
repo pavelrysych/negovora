@@ -723,20 +723,26 @@ body {
 
 .site-footer__credit {
   position: absolute;
-  left: clamp(20px, 5vw, 48px);
-  right: clamp(20px, 5vw, 48px);
-  bottom: clamp(14px, 3.6vw, 28px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
+  right: auto;
   margin: 0;
   padding: 0;
+  width: max-content;
+  max-width: min(92%, 420px);
+  text-align: center;
   font-family: var(--font-infant);
-  font-size: clamp(1.125rem, 3.8vw, 1.875rem);
+  font-size: clamp(0.875rem, 2.35vw, 1.0625rem);
   font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0.04em;
-  color: rgb(255, 255, 255);
+  line-height: 1.22;
+  letter-spacing: 0.06em;
+  color: #04244d;
   text-shadow:
-    0 1px 2px rgb(0 0 0 / 0.85),
-    0 4px 24px rgb(0 0 0 / 0.45);
+    0 0 1px rgb(255 255 255 / 0.65),
+    0 1px 2px rgb(255 255 255 / 0.55),
+    0 2px 8px rgb(255 255 255 / 0.35);
   z-index: 2;
 }
 
