@@ -1,5 +1,7 @@
 # Сайт зоопсихолога Дианы Неговоры
 
+Репозиторий на GitHub: [github.com/pavelrysych/negovora](https://github.com/pavelrysych/negovora)
+
 Статическая одностраничная вёрстка по содержимому профиля [Taplink — dinnega_zoopsy](https://taplink.cc/dinnega_zoopsy).
 
 ## Содержание
