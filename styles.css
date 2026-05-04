@@ -83,9 +83,7 @@ body {
   min-height: 0;
 }
 
-/* Левая колонка: верх строки текста первого абзаца справа = верху иконки Instagram; низ подзаголовка = низ «Частые вопросы» */
-
-/* Имя: первая строка «Диана» + IG с align-items: flex-start — верх иконки = верху первого абзаца справа (ячейки grid по верху). */
+/* Левая колонка: иконка Instagram по вертикали по середине строки «Диана»; низ подзаголовка = низ «Частые вопросы». */
 
 .intro__primary {
   display: flex;
@@ -120,7 +118,7 @@ body {
 .intro__name-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: clamp(10px, 2.2vw, 24px);
 }
 
