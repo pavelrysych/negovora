@@ -1,13 +1,13 @@
 /*
   Свёрстано под опубликованный figma.site (Desktop JSON export):
-  — фон #011731 • Inter Light 14 • заголовки Cormorant Infant
+  — фон #05264E • Inter Light 14 • заголовки Cormorant Infant
   — герой → двухколоночный блок с именем, текстом и CTAs
   — online: двойной контур, порядок как в узлах группы 11
   — три карточки: оранжевая обводка и нижняя плашка «Записаться»
 */
 
 :root {
-  --page: rgb(1, 23, 49);
+  --page: #05264e;
   --plate-stroke: rgb(229, 65, 82);
   --coral-text: rgb(239, 74, 88);
   --coral-btn: rgb(236, 67, 86);
