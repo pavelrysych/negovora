@@ -308,12 +308,6 @@ body {
   .online__photo-wrap {
     order: -1;
   }
-
-  .online__photo {
-    width: 100%;
-    margin-inline: 0;
-    object-position: center;
-  }
 }
 
 .online__frame {
@@ -417,10 +411,18 @@ body {
   display: block;
   width: 100%;
   margin-inline: 0;
-  min-height: min(564px, 120vw);
-  max-height: 564px;
-  object-fit: cover;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
   object-position: center;
+}
+
+@media (min-width: 921px) {
+  .online__photo {
+    min-height: min(564px, 120vw);
+    max-height: 564px;
+    object-fit: cover;
+  }
 }
 
 /* ——— Карточки тарифов (мастер: Figma / Tailwind, персик #ffc289) ——— */
