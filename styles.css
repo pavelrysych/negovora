@@ -306,6 +306,18 @@ main {
   color: var(--color-accent);
 }
 
+.price-alt {
+  margin: -0.65rem 0 1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text);
+  opacity: 0.72;
+}
+
+.price-card--featured .price-alt {
+  color: var(--color-accent-hover);
+}
+
 .price-card__note {
   font-size: 0.92rem;
   margin: 0 0 1rem;
@@ -455,4 +467,69 @@ main {
 
 .site-footer p {
   margin: 0;
+}
+
+.faq-list {
+  padding: 0.5rem 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .faq-list {
+    padding: 0.75rem 1.25rem 1rem;
+  }
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(110, 141, 156, 0.18);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item__summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 2.25rem 1rem 0.85rem;
+  font-weight: 600;
+  font-size: 1.02rem;
+  position: relative;
+  outline: none;
+}
+
+.faq-item__summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__summary::after {
+  content: "";
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform var(--transition);
+}
+
+.faq-item[open] .faq-item__summary::after {
+  transform: translateY(-35%) rotate(-135deg);
+}
+
+.faq-item__summary:focus-visible {
+  border-radius: 0.35rem;
+  box-shadow: 0 0 0 3px rgba(110, 141, 156, 0.35);
+}
+
+.faq-item__body {
+  padding: 0 0.85rem 1rem 0.85rem;
+}
+
+.faq-item__text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  white-space: pre-line;
+  opacity: 0.95;
 }
