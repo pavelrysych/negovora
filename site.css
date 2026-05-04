@@ -409,19 +409,36 @@ body {
 
 .online__photo {
   display: block;
-  width: 100%;
-  margin-inline: 0;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  object-position: center;
+}
+
+@media (max-width: 920px) {
+  .online__photo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .online__photo {
+    margin-inline: auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 557 / 564;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
 @media (min-width: 921px) {
   .online__photo {
+    margin-inline: 0;
+    width: 100%;
     min-height: min(564px, 120vw);
     max-height: 564px;
     object-fit: cover;
+    object-position: center;
   }
 }
 
