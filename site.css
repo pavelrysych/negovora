@@ -442,7 +442,7 @@ body {
 
 .tariffs .card-tariff {
   border: 0.757px solid var(--tariff-peach);
-  padding: 20px 30px 0;
+  padding: 20px 30px 14px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -531,7 +531,7 @@ body {
   margin-top: auto;
   align-self: center;
   flex-shrink: 0;
-  margin-bottom: clamp(36px, 8vw, 46px);
+  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   box-sizing: border-box;
