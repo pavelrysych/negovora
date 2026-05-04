@@ -299,6 +299,12 @@ body {
 
   .online__photo-wrap {
     order: -1;
+    justify-content: center;
+  }
+
+  .online__photo {
+    width: 100%;
+    object-position: center;
   }
 }
 
@@ -392,13 +398,16 @@ body {
 .online__photo-wrap {
   margin: 0;
   width: min(557px, 100%);
+  display: flex;
+  justify-content: flex-end;
 }
 
 .online__photo {
-  width: 100%;
+  width: min(512px, 92%);
   min-height: min(564px, 120vw);
   max-height: 564px;
   object-fit: cover;
+  object-position: right center;
   display: block;
 }
 
