@@ -326,7 +326,7 @@ body {
 }
 
 .online__heading {
-  margin: 0 0 12px;
+  margin: 0 0 20px;
   font-family: var(--font-infant);
   font-size: 24px;
   font-weight: 400;
@@ -335,7 +335,7 @@ body {
 }
 
 .online-price {
-  margin-bottom: clamp(14px, 3vw, 22px);
+  margin: 0 0 20px;
 }
 
 .online-price__major {
@@ -355,8 +355,12 @@ body {
 }
 
 .online__lead {
-  margin: 0 0 12px;
+  margin: 0 0 20px;
   font-weight: 300;
+}
+
+.online__frame > .list-light {
+  margin: 0;
 }
 
 .list-light {
