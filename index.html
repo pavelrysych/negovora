@@ -77,30 +77,15 @@
 
       <section id="services" class="section services" aria-labelledby="services-title">
         <h2 id="services-title">Стоимость услуг</h2>
-        <p class="section__intro">Запись — через Telegram.</p>
+        <p class="section__intro">Запись — через Telegram. ₽ и $ — ориентировочно.</p>
 
         <div class="pricing">
-          <article class="price-card">
-            <div class="price-card__header">
-              <h3>Выездная консультация</h3>
-              <p class="price"><span class="amount">150</span> <span class="currency">₾</span></p>
-              <p class="price-alt">≈ 5000 ₽</p>
-            </div>
-            <ul>
-              <li>1,5 часа</li>
-              <li>У вас дома</li>
-              <li>Поддержка в чате до следующей встречи или в течение 1 недели после консультации</li>
-              <li>Файл с индивидуальными рекомендациями и планом работы</li>
-            </ul>
-            <a class="btn btn--block btn--soft" href="https://t.me/dinnega">Записаться</a>
-          </article>
-
-          <article class="price-card price-card--featured">
+          <article class="price-card price-card--featured price-card--hero">
             <div class="badge">Популярно</div>
             <div class="price-card__header">
               <h3>Онлайн консультация</h3>
               <p class="price"><span class="amount">100</span> <span class="currency">₾</span></p>
-              <p class="price-alt">≈ 3000 ₽</p>
+              <p class="price-meta">≈ 3000 ₽ · ≈ $37</p>
             </div>
             <p class="price-card__note">
               Предполагает предоставление видео, на которых видно суть проблемы,
@@ -112,41 +97,58 @@
               <li>Поддержка в чате до следующей встречи или в течение 1 недели после консультации</li>
               <li>Файл с индивидуальными рекомендациями и планом работы</li>
             </ul>
-            <a class="btn btn--block btn--primary" href="https://t.me/dinnega">Записаться</a>
+            <a class="btn btn--block btn--primary btn--cta" href="https://t.me/dinnega">Записаться</a>
           </article>
 
-          <article class="price-card">
-            <div class="price-card__header">
-              <h3>Ноузворк тренировка</h3>
-              <p class="price"><span class="amount">80</span> <span class="currency">₾</span></p>
-              <p class="price-alt">≈ 2700 ₽</p>
-            </div>
-            <ul>
-              <li>30–40 минут</li>
-              <li>У вас дома либо онлайн</li>
-              <li>Поддержка в чате до следующей тренировки или в течение 1 недели после занятия</li>
-              <li>Памятка по пройденному на тренировке материалу</li>
-            </ul>
-            <a class="btn btn--block btn--soft" href="https://t.me/dinnega">Записаться</a>
-          </article>
+          <div class="pricing__secondary" aria-label="Другие форматы">
+            <article class="price-card price-card--muted">
+              <div class="price-card__header">
+                <h3>Выездная консультация</h3>
+                <p class="price"><span class="amount">150</span> <span class="currency">₾</span></p>
+                <p class="price-meta">≈ 5000 ₽ · ≈ $56</p>
+              </div>
+              <ul>
+                <li>1,5 часа</li>
+                <li>У вас дома</li>
+                <li>Поддержка в чате до следующей встречи или в течение 1 недели после консультации</li>
+                <li>Файл с индивидуальными рекомендациями и планом работы</li>
+              </ul>
+              <a class="btn btn--block btn--outline-muted" href="https://t.me/dinnega">Записаться</a>
+            </article>
 
-          <article class="price-card">
-            <div class="price-card__header">
-              <h3>Один вопрос</h3>
-              <p class="price"><span class="amount">40</span> <span class="currency">₾</span></p>
-              <p class="price-alt">≈ 1300 ₽</p>
-            </div>
-            <p class="price-card__note">
-              Консультация по одному вопросу, не требующему предварительного сбора информации.
-              Например: «Как организовать пространство в квартире перед появлением щенка».
-            </p>
-            <ul>
-              <li>20–30 минут</li>
-              <li>Онлайн общение в чате, возможны голосовые сообщения</li>
-              <li>Ссылки на материалы по теме вопроса</li>
-            </ul>
-            <a class="btn btn--block btn--soft" href="https://t.me/dinnega">Записаться</a>
-          </article>
+            <article class="price-card price-card--muted">
+              <div class="price-card__header">
+                <h3>Ноузворк тренировка</h3>
+                <p class="price"><span class="amount">80</span> <span class="currency">₾</span></p>
+                <p class="price-meta">≈ 2700 ₽ · ≈ $30</p>
+              </div>
+              <ul>
+                <li>30–40 минут</li>
+                <li>У вас дома либо онлайн</li>
+                <li>Поддержка в чате до следующей тренировки или в течение 1 недели после занятия</li>
+                <li>Памятка по пройденному на тренировке материалу</li>
+              </ul>
+              <a class="btn btn--block btn--outline-muted" href="https://t.me/dinnega">Записаться</a>
+            </article>
+
+            <article class="price-card price-card--muted">
+              <div class="price-card__header">
+                <h3>Один вопрос</h3>
+                <p class="price"><span class="amount">40</span> <span class="currency">₾</span></p>
+                <p class="price-meta">≈ 1300 ₽ · ≈ $15</p>
+              </div>
+              <p class="price-card__note price-card__note--compact">
+                Консультация по одному вопросу, не требующему предварительного сбора информации.
+                Например: «Как организовать пространство в квартире перед появлением щенка».
+              </p>
+              <ul>
+                <li>20–30 минут</li>
+                <li>Онлайн общение в чате, возможны голосовые сообщения</li>
+                <li>Ссылки на материалы по теме вопроса</li>
+              </ul>
+              <a class="btn btn--block btn--outline-muted" href="https://t.me/dinnega">Записаться</a>
+            </article>
+          </div>
         </div>
       </section>
 
