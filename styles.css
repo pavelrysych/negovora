@@ -317,7 +317,7 @@ body {
 }
 
 .popular-line {
-  margin: 0 0 6px;
+  margin: 0 0 20px;
   font-family: var(--font-infant);
   font-size: clamp(30px, 4.5vw, 40px);
   line-height: 1;
