@@ -1,0 +1,6 @@
+# При смене домена замените Sitemap URL на свой корень сайта (как в index.html).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://negovora.vercel.app/sitemap.xml

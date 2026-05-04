@@ -12,9 +12,15 @@
 - Instagram: `https://www.instagram.com/dinnega_zoopsy/` — иконка в шапке.
 - Надпись «Частые вопросы» в шапке ведёт к нижнему блоку `#faq-content`.
 
-Изображения в `assets/` скачаны с CDN того же сайта (`_assets/v11/*.png`). Локально:
+**SEO** (поиск и соцсети):
 
-```bash
+- Усилены `<title>`, описание (`meta description`), canonical, hreflang для `ru-RU`, тема вкладки (`theme-color`).
+- Разметка **Open Graph** и **Twitter Card** для превью ссылок; картинка превью — `assets/hero.png`.
+- Структурированные данные **JSON-LD** (`WebSite`, `Person`, `ProfessionalService`) в `<head>` (проверка: Rich Results Test / Schema Validator).
+- Файлы в корне: [`robots.txt`](robots.txt), [`sitemap.xml`](sitemap.xml).
+- Абсолютный базовый URL сейчас **`https://negovora.vercel.app`** — при подключении своего домена замените его **во всех местах**: комментарий в `index.html`, URL в мета-тегах и JSON-LD, строка `Sitemap` в `robots.txt`, `<loc>` в `sitemap.xml`.
+
+Изображения в `assets/` скачаны с CDN того же сайта (`_assets/v11/*.png`). Локально:
 python3 -m http.server 8080
 ```
 
