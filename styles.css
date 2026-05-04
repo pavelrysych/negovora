@@ -425,7 +425,7 @@ body {
 .tariffs {
   margin-top: clamp(28px, 5vw, 44px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(12px, 2vw, 24px);
   align-items: stretch;
 }
@@ -444,6 +444,8 @@ body {
   flex-direction: column;
   gap: 14px;
   min-height: 401px;
+  background: transparent;
+  box-sizing: border-box;
 }
 
 .card-tariff__name {
@@ -453,6 +455,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
+  color: rgb(255, 255, 255);
 }
 
 .card-tariff__name--sm {
@@ -461,6 +464,30 @@ body {
 
 .card-tariff__body {
   margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+}
+
+.card-tariff__list {
+  margin: 0;
+  padding-left: 1.06rem;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+}
+
+.card-tariff__list li {
+  margin-bottom: 8px;
+}
+
+.card-tariff__list li::marker {
+  font-size: 0.74em;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .card-tariff__sums {
@@ -497,8 +524,12 @@ body {
   background: var(--orange-bar-fill);
   color: rgb(255, 255, 255) !important;
   text-decoration: none;
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 12px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .cta-bar-orange:hover {
