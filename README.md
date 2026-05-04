@@ -1,30 +1,17 @@
-# Сайт зоопсихолога Дианы Неговоры
+# Сайт Дианы Неговоры (вёрстка под опубликованный Figma-макет)
 
-Витрина на чистых `index.html` + `styles.css`. Визуально и текстом ориентирована на опубликованный макет Figma:  
-[https://swept-coral-15784474.figma.site/](https://swept-coral-15784474.figma.site/)
+Статический лендинг: `index.html` + `styles.css`. Интерполяции по **слоям Desktop** из JSON `figma.site` (шрифты и порядок блоков совпадают с опубликованной страницей).
 
-Изображения **скачаны из CDN Figma** и лежат в `assets/` (чтобы локальная копия и GitHub Pages не зависели от внешнего `_assets`). Имена:
+**Функционал ссылок (как договорено):**
 
-| файл | содержание |
-|------|------------|
-| `assets/hero.png` | основной герой-иллюстрация (ландшафт) |
-| `assets/hero-mobile.png` | узкий экран (<768px) |
-| `assets/consult-feature.png` | фото к блоку online |
-| `assets/extra.png` | иконка Instagram с макета |
-| `assets/decoration.png` | логотип Telegram с макета |
+- Telegram: `https://t.me/dinnega` — главная кнопка и все «Записаться».
+- Instagram: `https://www.instagram.com/dinnega_zoopsy/` — иконка в шапке.
+- «Частые вопросы» над шапкой ведёт к нижнему блоку `#faq-content`.
 
-Ссылки: Telegram — [`https://t.me/dinnega`](https://t.me/dinnega); Instagram по умолчанию — профиль `@dinnega_zoopsy` (можно изменить разметкой).
-
-## Запуск локально
+Изображения в `assets/` скачаны с CDN того же сайта (`_assets/v11/*.png`). Локально:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Откройте [http://localhost:8080](http://localhost:8080) или `index.html` в браузере.
-
-Шрифты: Google Fonts **Cormorant Garamond** + **Figtree**.
-
-## Git
-
-История версий через Git репозиторий.
+Шрифты: **Cormorant Infant**, **Inter** (Google Fonts). Системная **Georgia** для блока имени.
