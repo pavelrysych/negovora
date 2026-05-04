@@ -74,32 +74,32 @@ body {
   justify-content: start;
   column-gap: clamp(16px, 4vw, 72px);
   row-gap: 0;
-  align-items: end;
+  align-items: stretch;
   margin-top: -24px;
 }
 
-@media (max-width: 920px) {
-  .intro__grid {
-    grid-template-columns: 1fr;
-    margin-top: 20px;
-  }
-
-  .intro__secondary {
-    order: 2;
-    margin-top: 8px;
-  }
+.intro__grid > .intro__primary,
+.intro__grid > .intro__secondary {
+  min-height: 0;
 }
 
+/* Левая колонка: верх заголовка = верх текста справа; низ подзаголовка = низ «Частые вопросы» (колонки растянуты по высоте) */
 .intro__primary {
-  position: relative;
-  padding-bottom: clamp(8px, 2vw, 16px);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .intro__heading {
+  flex: 1;
   margin: 0;
-  padding: clamp(40px, 7vw, 56px) 0 0;
+  padding: 0;
   color: rgb(255, 255, 255);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
 }
 
 /* Имя: блок из двух строк; первая — «Диана» + Instagram в одну линию по центру по вертикали */
@@ -136,8 +136,10 @@ body {
   text-decoration: none;
 }
 
-/* Подзаголовок: Cormorant Infant Regular 24 px — как в Figma */
+/* Подзаголовок: привязка к низу колонки через space-between у .intro__heading */
 .intro__subtitle {
+  display: block;
+  margin-top: 0;
   font-family: var(--font-infant);
   font-weight: 400;
   font-size: clamp(18px, 2.8vw, 24px);
@@ -153,16 +155,60 @@ body {
 }
 
 @media (max-width: 920px) {
+  .intro__grid {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  .intro__secondary {
+    order: 2;
+    margin-top: 8px;
+    height: auto;
+  }
+
   .intro__heading {
+    flex: none;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: 16px;
     padding-top: 12px;
+  }
+
+  .intro__primary {
+    display: block;
+  }
+
+  .intro__secondary__cta {
+    flex: 0 0 auto;
+    margin-block: 12px;
   }
 }
 
 .intro__secondary {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 0;
+}
+
+/* Тексты — сверху; кнопка Telegram — по вертикали по центру зазора до «Частые вопросы» */
+.intro__secondary__lead {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  padding-bottom: 6px;
+}
+
+.intro__secondary__cta {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  min-height: 0;
+}
+
+.intro__secondary__cta .cta-tg {
+  width: 100%;
 }
 
 .intro__text {
@@ -176,7 +222,7 @@ body {
 }
 
 .cta-tg {
-  margin-top: 6px;
+  margin-top: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -207,7 +253,9 @@ body {
 }
 
 .intro__faq {
-  margin-top: 16px;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 16px 0 0;
   text-align: center;
   font-family: var(--font-infant);
   font-size: 24px;
