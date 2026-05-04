@@ -75,7 +75,11 @@ body {
   column-gap: clamp(16px, 4vw, 72px);
   row-gap: 0;
   align-items: stretch;
-  margin-top: -24px;
+  margin-top: clamp(28px, 5vw, 72px);
+  /* Одна переменная кегля — для синхронного сдвига правого текста под верх иконки (центрированной по строке «Диана») */
+  --hero-name-fs: clamp(48px, 9.2vw, 96px);
+  --hero-name-line-box: calc(var(--hero-name-fs) * 1.1);
+  --hero-ig-size: clamp(52px, calc(var(--hero-name-fs) * 0.78), 89px);
 }
 
 .intro__grid > .intro__primary,
@@ -83,7 +87,7 @@ body {
   min-height: 0;
 }
 
-/* Левая колонка: иконка Instagram по вертикали по середине строки «Диана»; низ подзаголовка = низ «Частые вопросы». */
+/* Левая колонка: IG по середине строки «Диана»; правая — первый абзац со смещением, верх строки совпадает с верхом иконки; низ подзаголовка = низ FAQ. Отступ ниже иллюстрации — через margin-top сетки. */
 
 .intro__primary {
   display: flex;
@@ -109,7 +113,7 @@ body {
   align-items: flex-start;
   font-family: var(--font-infant);
   font-weight: 400;
-  font-size: clamp(48px, 9.2vw, 96px);
+  font-size: var(--hero-name-fs);
   line-height: normal;
   letter-spacing: 0;
   text-align: left;
@@ -157,7 +161,7 @@ body {
 @media (max-width: 920px) {
   .intro__grid {
     grid-template-columns: 1fr;
-    margin-top: 20px;
+    margin-top: clamp(22px, 7vw, 48px);
   }
 
   .intro__secondary {
@@ -198,6 +202,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+@media (min-width: 921px) {
+  /* Абзацы опущены так, чтобы верх первой строки ≈ верх IG (формула центрирования иконки в строке имени) */
+  .intro__secondary__lead {
+    padding-top: max(0px, calc((var(--hero-name-line-box) - var(--hero-ig-size)) * 0.5));
+  }
 }
 
 .intro__secondary__cta {
