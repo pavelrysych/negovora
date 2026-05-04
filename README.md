@@ -20,7 +20,11 @@
 - Файлы в корне: [`robots.txt`](robots.txt), [`sitemap.xml`](sitemap.xml).
 - Абсолютный базовый URL сейчас **`https://negovora.vercel.app`** — при подключении своего домена замените его **во всех местах**: комментарий в `index.html`, URL в мета-тегах и JSON-LD, строка `Sitemap` в `robots.txt`, `<loc>` в `sitemap.xml`.
 
-Изображения в `assets/` скачаны с CDN того же сайта (`_assets/v11/*.png`). Локально:
+Под футером FAQ добавлен блок `<footer>`: ширина на всё «внутреннее полотно» шелла (как у героя), файл `assets/footer-illustration.png`, текст **Diana Negovora, 2026** поверх изображения с градиентом для читаемости.
+
+Изображения в `assets/` скачаны с CDN того же сайта (`_assets/v11/*.png`). Дополнительно: свой футер-баннер `footer-illustration.png`. Локально:
+
+```bash
 python3 -m http.server 8080
 ```
 
