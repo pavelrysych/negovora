@@ -13,6 +13,9 @@
   --coral-btn: #ff7c89;
   --orange-edge: rgb(243, 142, 1);
   --orange-bar-fill: rgb(243, 142, 1);
+  --tariff-peach: #ffc289;
+  --tariff-peach-hover: #ffb066;
+  --tariff-cta-text: #04244d;
   --telegram: rgb(44, 163, 219);
   --shell-max: 1280px;
   --pad-x: 64px;
@@ -420,7 +423,7 @@ body {
   object-position: center;
 }
 
-/* ——— Карточки ——— */
+/* ——— Карточки тарифов (мастер: Figma / Tailwind, персик #ffc289) ——— */
 
 .tariffs {
   margin-top: clamp(28px, 5vw, 44px);
@@ -437,112 +440,138 @@ body {
   }
 }
 
-.card-tariff {
-  border: 1px solid var(--orange-edge);
-  padding: 22px 16px 0;
+.tariffs .card-tariff {
+  border: 0.757px solid var(--tariff-peach);
+  padding: 20px 30px 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  min-height: 401px;
+  align-items: stretch;
+  gap: 0;
+  min-height: 400.946px;
   background: transparent;
   box-sizing: border-box;
 }
 
-.card-tariff__name {
-  margin: 0;
-  padding-top: 10px;
+.tariffs .card-tariff__name {
+  margin: 0 0 clamp(14px, 2.8vw, 19px);
+  padding-top: 0;
   font-family: var(--font-infant);
-  font-size: 24px;
+  font-size: 18.172px;
   font-weight: 400;
-  line-height: 1;
+  line-height: normal;
   color: rgb(255, 255, 255);
 }
 
-.card-tariff__name--sm {
-  font-size: 18px;
-}
-
-.card-tariff__body {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgb(255, 255, 255);
-}
-
-.card-tariff__content {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-height: 0;
-}
-
-.card-tariff__list {
-  margin: 0;
-  padding-left: 1.06rem;
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgb(255, 255, 255);
-}
-
-.card-tariff__list li {
-  margin-bottom: 8px;
-}
-
-.card-tariff__list li::marker {
-  font-size: 0.74em;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.card-tariff__sums {
-  margin: 0;
+.tariffs .card-tariff__sums {
+  margin: 0 0 clamp(14px, 2.5vw, 18px);
   padding-top: 0;
 }
 
-.card-tariff__lari {
+.tariffs .card-tariff__lari {
   margin: 0;
   font-family: var(--font-infant);
-  font-size: 40px;
-  line-height: 1;
-  color: var(--coral-text);
+  font-size: 30.286px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--tariff-peach);
 }
 
-.card-tariff__alt {
-  margin: 9px 0 0;
+.tariffs .card-tariff__alt {
+  margin: 11px 0 0;
   font-family: var(--font-infant);
-  font-size: clamp(18px, 2.9vw, 24px);
-  line-height: 1;
-  color: var(--coral-text);
+  font-size: 15.143px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--tariff-peach);
 }
 
-.cta-bar-orange {
-  margin-top: auto;
-  flex-shrink: 0;
-  align-self: stretch;
-  margin-left: -16px;
-  margin-right: -16px;
-  margin-bottom: 0;
+.tariffs .card-tariff__content {
+  flex: 1 1 auto;
   display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2.8vw, 19px);
+  min-height: 0;
+}
+
+.tariffs .card-tariff__body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 10.6px;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+}
+
+.tariffs .card-tariff__list {
+  margin: 0;
+  padding-left: 22px;
+  list-style-type: disc;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 10.6px;
+  line-height: normal;
+  color: rgb(255, 255, 255);
+}
+
+.tariffs .card-tariff__list li {
+  margin-bottom: clamp(12px, 2.4vw, 18px);
+  padding-left: 2px;
+}
+
+.tariffs .card-tariff__list li:last-child {
+  margin-bottom: 0;
+}
+
+.tariffs .card-tariff__list li::marker {
+  font-size: 0.9em;
+  color: rgb(255, 255, 255);
+}
+
+.tariffs .cta-bar-orange {
+  margin-top: auto;
+  align-self: center;
+  flex-shrink: 0;
+  margin-bottom: clamp(36px, 8vw, 46px);
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 41px;
-  background: var(--orange-bar-fill);
-  color: rgb(1, 20, 40) !important;
-  text-decoration: none;
+  width: min(268.788px, 100%);
+  height: 31.043px;
+  padding: 0 14px;
+  background: var(--tariff-peach);
+  border: none;
+  color: var(--tariff-cta-text) !important;
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 12px;
-  border: none;
+  font-size: 12.114px;
+  line-height: normal;
+  text-decoration: none;
   cursor: pointer;
-  box-sizing: border-box;
+  transition:
+    background-color 200ms ease,
+    transform 120ms ease,
+    box-shadow 200ms ease;
 }
 
-.cta-bar-orange:hover {
-  filter: brightness(1.06);
+.tariffs .cta-bar-orange:hover {
+  background: var(--tariff-peach-hover);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.12),
+    0 4px 6px -4px rgb(0 0 0 / 0.08);
+}
+
+.tariffs .cta-bar-orange:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 959px) {
+  .tariffs .card-tariff__body,
+  .tariffs .card-tariff__list {
+    font-size: 12px;
+  }
 }
 
 /* ——— Прижатый текстовый футер ——— */
