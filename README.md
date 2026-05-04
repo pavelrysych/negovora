@@ -2,13 +2,13 @@
 
 Репозиторий на GitHub: [github.com/pavelrysych/negovora](https://github.com/pavelrysych/negovora)
 
-Статическая страница по материалам [Taplink — dinnega_zoopsy](https://taplink.cc/dinnega_zoopsy). Визуальный макет основан на `Desktop.pdf` (тёмная тема, иллюстрация и типографика блоков цен экспортированы из PDF).
+Статическая страница по материалам [Taplink — dinnega_zoopsy](https://taplink.cc/dinnega_zoopsy). Визуальный макет основан на `Desktop.pdf` (тёмная тема, типографика блоков цен). Исходные изображения для витрины: `assets/hero-poster.png` (герой), `assets/photo-park.png` (фото в блоке online).
 
 ## Содержание
 
-- Герой: арт из PDF (`assets/hero-from-pdf.png`)
+- Герой: `assets/hero-poster.png`
 - Блок знакомства + синяя кнопка Telegram
-- Тарифы: выделенный **online** с фото из PDF (`assets/pricing-feature-photo.png`), три карточки с оранжевой обводкой
+- Тарифы: выделенный **online** с `assets/photo-park.png`, три карточки с оранжевой обводкой
 - **Частые вопросы** (`#faq`): тексты с [Taplink /p/ea52bf/](https://taplink.cc/dinnega_zoopsy/p/ea52bf/)
 
 ## Запуск локально
