@@ -83,7 +83,10 @@ body {
   min-height: 0;
 }
 
-/* Левая колонка: верх заголовка = верх текста справа; низ подзаголовка = низ «Частые вопросы» (колонки растянуты по высоте) */
+/* Левая колонка: верх строки текста первого абзаца справа = верху иконки Instagram; низ подзаголовка = низ «Частые вопросы» */
+
+/* Имя: первая строка «Диана» + IG с align-items: flex-start — верх иконки = верху первого абзаца справа (ячейки grid по верху). */
+
 .intro__primary {
   display: flex;
   flex-direction: column;
@@ -102,7 +105,6 @@ body {
   min-height: 0;
 }
 
-/* Имя: блок из двух строк; первая — «Диана» + Instagram в одну линию по центру по вертикали */
 .intro__name {
   display: flex;
   flex-direction: column;
@@ -118,7 +120,7 @@ body {
 .intro__name-row {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(10px, 2.2vw, 24px);
 }
 
