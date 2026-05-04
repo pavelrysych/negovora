@@ -47,9 +47,10 @@ body {
 }
 
 .shell {
+  --shell-pad-x: clamp(24px, 11vw, 140px);
   max-width: min(1280px, 100%);
   margin-inline: auto;
-  padding-inline: clamp(24px, 11vw, 140px);
+  padding-inline: var(--shell-pad-x);
   padding-bottom: min(140px, 15vh);
   box-sizing: border-box;
 }
@@ -57,8 +58,8 @@ body {
 /* Герой-трек на всю колонну 1278 px (кроме боковых полей области 1847); выносим арт во внутреннее полотно 140 px компенсируют отступы текстов ниже как в узле Desktop. */
 
 .intro__art {
-  margin-inline: calc(-1 * clamp(24px, 11vw, 140px));
-  width: calc(100% + 2 * clamp(24px, 11vw, 140px));
+  margin-inline: calc(-1 * var(--shell-pad-x));
+  width: calc(100% + 2 * var(--shell-pad-x));
   display: block;
 }
 
@@ -70,8 +71,11 @@ body {
 
 .intro__grid {
   display: grid;
-  grid-template-columns: minmax(0, 473px) minmax(0, 557px);
-  justify-content: start;
+  /* Та же ширина, что у иллюстрации над блоком — вынос за padding .shell */
+  margin-inline: calc(-1 * var(--shell-pad-x));
+  width: calc(100% + 2 * var(--shell-pad-x));
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 473fr) minmax(0, 557fr);
   column-gap: clamp(16px, 4vw, 72px);
   row-gap: 0;
   align-items: stretch;
@@ -162,6 +166,8 @@ body {
   .intro__grid {
     grid-template-columns: 1fr;
     margin-top: clamp(22px, 7vw, 48px);
+    margin-inline: 0;
+    width: 100%;
   }
 
   .intro__secondary {
@@ -238,7 +244,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: min(557px, 100%);
+  width: 100%;
   min-height: 41px;
   padding: 10px 16px;
   background: rgb(44, 163, 219);
