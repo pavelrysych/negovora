@@ -450,7 +450,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(12px, 2vw, 24px);
-  align-items: stretch;
+  align-items: start;
 }
 
 @media (max-width: 959px) {
@@ -467,7 +467,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   gap: 0;
-  min-height: 400.946px;
+  min-height: 0;
   background: transparent;
   box-sizing: border-box;
 }
@@ -506,7 +506,7 @@ body {
 }
 
 .tariffs .card-tariff__content {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: clamp(12px, 2.8vw, 19px);
@@ -547,16 +547,8 @@ body {
   color: rgb(255, 255, 255);
 }
 
-/* Воздух между списком и кнопкой: нижнюю часть колонки съедает ::after (+ flex-grow) */
-.tariffs .card-tariff__content::after {
-  content: "";
-  flex: 1 1 auto;
-  min-height: clamp(24px, 5vw, 52px);
-  width: 100%;
-}
-
 .tariffs .cta-bar-orange {
-  margin-top: auto;
+  margin-top: clamp(14px, 3.2vw, 22px);
   align-self: center;
   flex-shrink: 0;
   margin-bottom: 0;
