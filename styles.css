@@ -161,7 +161,12 @@ body {
 
 .intro__text {
   margin: 0;
+  font-family: var(--font-sans);
   font-weight: 300;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0;
+  text-align: left;
 }
 
 .cta-tg {

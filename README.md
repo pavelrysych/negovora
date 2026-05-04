@@ -18,4 +18,4 @@
 python3 -m http.server 8080
 ```
 
-Шрифты: **Cormorant Infant**, **Inter** (Google Fonts). В шапке: имя **Cormorant Infant Regular 96 px**; строка «Зоопсихолог, Тбилиси» — **Cormorant Infant Regular 24 px** (как в Figma; на узких экранах подзаголовок слегка уменьшен через `clamp`).
+Шрифты: **Cormorant Infant**, **Inter** (Google Fonts). В шапке: имя **Cormorant Infant Regular 96 px**; строка «Зоопсихолог, Тбилиси» — **Cormorant Infant Regular 24 px** (как в Figma; на узких экранах подзаголовок слегка уменьшен через `clamp`). Абзацы в правой колонке героя — **Inter Light (300) / 14 px**, line-height auto, без трекинга — как в Figma.
