@@ -1,30 +1,22 @@
 # Сайт зоопсихолога Дианы Неговоры
 
-Репозиторий на GitHub: [github.com/pavelrysych/negovora](https://github.com/pavelrysych/negovora)
-
-Статическая страница по материалам [Taplink — dinnega_zoopsy](https://taplink.cc/dinnega_zoopsy). Визуальный макет основан на `Desktop.pdf` (тёмная тема, типографика блоков цен). Исходные изображения для витрины: `assets/hero-poster.png` (герой), `assets/photo-park.png` (фото в блоке online).
-
-## Содержание
-
-- Герой: `assets/hero-poster.png`
-- Блок знакомства + синяя кнопка Telegram
-- Тарифы: выделенный **online** с `assets/photo-park.png`, три карточки с оранжевой обводкой
-- **Частые вопросы** (`#faq`): тексты с [Taplink /p/ea52bf/](https://taplink.cc/dinnega_zoopsy/p/ea52bf/)
+Статическая витрина: семантический `index.html` и `styles.css`. **Визуал и структура** ориентированы на полноэкранный PNG **Desktop2** (референс можно положить рядом с проектом как `.design-ref.png`).
 
 ## Запуск локально
-
-Откройте `index.html` в браузере или поднимите простой сервер:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Затем откройте `http://localhost:8080`.
+Откройте [http://localhost:8080](http://localhost:8080) или просто откройте `index.html` в браузере.
 
-## Стек
+## Ассеты
 
-HTML, CSS (без сборки). Шрифты: Google Fonts (**Cormorant Infant**, **Manrope**).
+- `assets/hero-banner.png` — кроп героя (иллюстрация + типографика) с референса Desktop2
+- `assets/pricing-feature-photo.png` — фото для блока «online» с того же макета
+
+Шрифты подключаются с Google Fonts: **Cormorant Garamond**, **DM Sans**, **JetBrains Mono** (кириллица).
 
 ## Версионирование
 
-В каталоге инициализирован Git — можно коммитить изменения и откатываться к прежним версиям.
+В репозитории инициализирован Git — можно откатываться к прежним версиям.
